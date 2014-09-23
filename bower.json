@@ -1,6 +1,6 @@
 {
   "name": "ap-key",
-  "version": "0.0.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/anotherpit/apKey",
   "authors": [
     "anotherpit <anotherpit@gmail.com>"
@@ -16,7 +16,7 @@
     "!/build/**",
     "!/bower.json",
     "!/README*",
-    "!/LICENSE*",
+    "!/LICENSE*"
   ],
   "dependencies": {
     "angular": ">=1.2"
