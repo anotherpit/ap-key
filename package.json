@@ -1,6 +1,6 @@
 {
   "name": "ap-key",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Hot-key directive for AngularJS",
   "main": "build",
   "scripts": {
