@@ -1,11 +1,11 @@
 {
-  "name": "rubyish-front-seed",
+  "name": "ap-key",
   "version": "0.0.0",
-  "homepage": "https://github.com/anotherpit/rubyish-front-seed",
+  "homepage": "https://github.com/anotherpit/apKey",
   "authors": [
     "anotherpit <anotherpit@gmail.com>"
   ],
-  "description": "",
+  "description": "Hot-key directive for AngularJS",
   "main": [
     "build"
   ],
@@ -15,7 +15,10 @@
     "**",
     "!/build/**",
     "!/bower.json",
-    "!/README*"
+    "!/README*",
+    "!/LICENSE*",
   ],
-  "dependencies": {}
+  "dependencies": {
+    "angular": ">=1.2"
+  }
 }

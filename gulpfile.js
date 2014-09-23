@@ -3,6 +3,7 @@ var gulp = require('gulp'),
     clean = require('gulp-clean'),
     connect = require('gulp-connect'),
     install = require('gulp-install'),
+    protractor = require("gulp-protractor").protractor,
     rename = require('gulp-rename'),
     run = require('gulp-run'),
     slim = require('gulp-slim'),
@@ -55,6 +56,23 @@ gulp.task('build', [
     'build:javascripts',
     'build:templates',
     'build:stylesheets'
+]);
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// Test
+
+gulp.task('test:e2e', function() {
+    return gulp.src(['./tests/e2e/**/*spec.js', './tests/e2e/**/*spec.coffee'])
+        .pipe(protractor({
+            configFile: 'tests/e2e/protractor.config.coffee',
+            args: ['--baseUrl', 'http://localhost:8082/tests/e2e/']
+        }))
+        .on('error', function(e) {
+            throw e
+        });
+});
+gulp.task('test', [
+    'test:e2e'
 ]);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////

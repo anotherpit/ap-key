@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body ng-app="test" ng-init="log = []" tabindex="-1">
+    <button ap-key="a" ng-click="log.unshift('a')">Press A</button>
+    <button ap-key="s" ng-click="log.unshift('s1')">Press S<sup>1</sup></button>
+    <button ap-key="s" ng-click="log.unshift('s2')">Press S<sup>2</sup></button>
+    <button ap-key="d" ng-click="log.unshift('d')" disabled>Press D</button>
+    <button ap-key="SPACE" ng-click="log.unshift('SPACE')">Press space</button>
+    <button ap-key="ENTER" ng-click="log.unshift('ENTER')">Press enter</button>
+
+    <ul>
+        <li ng-repeat="key in log track by $index" ng-bind="key"></li>
+    </ul>
+
+    <script type="text/javascript" src="../../bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="../../build/index.js"></script>
+    <script type="text/javascript">angular.module('test', ['anotherpit/apKey']);</script>
+</body>
+</html>
